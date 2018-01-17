@@ -7,18 +7,23 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.graphics.Typeface;
 
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = MainActivity.class.getSimpleName();
     private Button mFindRestaurantsButton;
     private EditText mLocationEditText;
+    private TextView mAppNameTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mLocationEditText = (EditText) findViewById(R.id.locationEditText);
-
+        mAppNameTextView = (TextView) findViewById(R.id.appNameTextView);
+        Typeface ostrichFont = Typeface.createFromAsset(getAssets(), "fonts/Gotham Nights.ttf");
+        mAppNameTextView.setTypeface(ostrichFont);
         mFindRestaurantsButton = (Button) findViewById(R.id.findRestaurantsButton);
         mFindRestaurantsButton.setOnClickListener(new View.OnClickListener() {
             @Override
