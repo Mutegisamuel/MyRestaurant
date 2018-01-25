@@ -1,4 +1,4 @@
-package com.example.humungus.myrestaurants;
+package com.example.humungus.myrestaurants.models;
 
 import java.util.ArrayList;
 
@@ -26,8 +26,6 @@ public class Restaurant {
         this.mRating = rating;
         this.mImageUrl = imageUrl;
         this.mAddress = address;
-        this.mLatitude = latitude;
-        this.mLongitude = longitude;
         this.mCategories = categories;
     }
 
